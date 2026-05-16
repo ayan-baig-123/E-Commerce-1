@@ -12,7 +12,7 @@ export default function LoginPage() {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await fetch("http://localhost:8000/api/token/", {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/token/`, {
                 method: "POST",
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(credentials),

@@ -27,7 +27,7 @@ export default function AddProductPage() {
   }, []);
 
   const fetchProducts = async () => {
-    const res = await fetch("http://localhost:8000/api/products/");
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/`);
     if (res.ok) {
       const data = await res.json();
       setProducts(data);
@@ -40,7 +40,7 @@ export default function AddProductPage() {
     const token = localStorage.getItem("access_token");
 
     try {
-      const res = await fetch("http://localhost:8000/api/add-product/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/add-product/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

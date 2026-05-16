@@ -9,7 +9,8 @@ export default function HomePage() {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/products/");
+      // Ab aapne aise badalna hai:
+const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/`);
       if (res.ok) {
         const data = await res.json();
         setProducts(data);
