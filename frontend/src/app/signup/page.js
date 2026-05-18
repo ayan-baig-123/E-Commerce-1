@@ -21,7 +21,7 @@ export default function SignupPage() {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/send-otp/`, {
+            const res = await fetch("https://e-commerce-1-2-bv0w.onrender.com/api/send-otp/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: formData.email }),
@@ -45,7 +45,7 @@ export default function SignupPage() {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/verify-otp/`, {
+            const res = await fetch("https://e-commerce-1-2-bv0w.onrender.com/api/verify-otp/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

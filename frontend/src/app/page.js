@@ -10,7 +10,7 @@ export default function HomePage() {
   const fetchProducts = async () => {
     try {
       // Ab aapne aise badalna hai:
-const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/`);
+const res = await fetch("https://e-commerce-1-2-bv0w.onrender.com/api/products/");
       if (res.ok) {
         const data = await res.json();
         setProducts(data);

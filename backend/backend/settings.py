@@ -145,20 +145,12 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'gamechangerayan@gmail.com' # Aapka Gmail
 EMAIL_HOST_PASSWORD = 'xotf wwpo xhfi njmc'  # Gmail ka App Password
 
+# Purani saari CORS settings hata kar sirf ye 4 lines likh dein:
 CORS_ALLOW_ALL_ORIGINS = True
-
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = [
-    "accept",
-    "accept-encoding",
-    "authorization",
-    "content-type",
-    "dnt",
-    "origin",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
+
+from corsheaders.defaults import default_headers
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'content-type',
+    'authorization',
 ]
-
-
-

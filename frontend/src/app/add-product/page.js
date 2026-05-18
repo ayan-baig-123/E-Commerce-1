@@ -40,7 +40,7 @@ export default function AddProductPage() {
     const token = localStorage.getItem("access_token");
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/add-product/`, {
+      const res = await fetch("https://e-commerce-1-2-bv0w.onrender.com/api/add-product/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -12,7 +12,7 @@ export default function LoginPage() {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/token/`, {
+            const res = await fetch("https://e-commerce-1-2-bv0w.onrender.com/api/token/", {
                 method: "POST",
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(credentials),
